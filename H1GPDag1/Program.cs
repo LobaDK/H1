@@ -7,7 +7,7 @@
             string menu = "";
             while (menu != "m" && menu != "yard" && menu != "inches" && menu != "c" && menu != "f") 
             {
-                System.Console.Write("\nType 'M' to convert kilometers to miles\nType 'yard' to convert miles to yards\nType 'inches' to convert centimeters to inches\nType 'c' to convert celsius to farenheit\nType 'f' to convert farenheit to celsius\n: ");
+                System.Console.Write("\nType 'M' to convert kilometers to miles\nType 'yard' to convert miles to yards\nType 'inches' to convert centimeters to inches\nType 'f' to convert celsius to farenheit\nType 'c' to convert farenheit to celsius\n: ");
                 menu = System.Convert.ToString(System.Console.ReadLine()).ToLower();
             }
 
@@ -21,25 +21,25 @@
             {
                 System.Console.Write("Distance in miles to convert to yards: ");
                 double m = System.Convert.ToDouble(System.Console.ReadLine());
-                System.Console.WriteLine($"Distance in miles: {ConvertToYards(m)}");
+                System.Console.WriteLine($"Distance in yards: {ConvertToYards(m)}");
             }
             else if (menu == "inches")
             {
                 System.Console.Write("Distance in centimeters to convert to inches: ");
                 double i = System.Convert.ToDouble(System.Console.ReadLine());
-                System.Console.WriteLine($"Distance in miles: {ConvertToInches(i)}");
+                System.Console.WriteLine($"Distance in inches: {ConvertToInches(i)}");
             }
             else if (menu == "c")
             {
-                System.Console.Write("Distance in centimeters to convert to inches: ");
+                System.Console.Write("Temperature in Celsious to convert to Farenheit: ");
                 double f = System.Convert.ToDouble(System.Console.ReadLine());
-                System.Console.WriteLine($"Distance in miles: {ConvertToCelsious(f)}");
+                System.Console.WriteLine($"Temperature in Farenheit: {ConvertToFarenheit(f)}");
             }
             else if (menu == "f")
             {
-                System.Console.Write("Distance in centimeters to convert to inches: ");
+                System.Console.Write("Temperature in Farenheit to convert to Celcius: ");
                 double c = System.Convert.ToDouble(System.Console.ReadLine());
-                System.Console.WriteLine($"Distance in miles: {ConvertToCelsious(c)}");
+                System.Console.WriteLine($"Temperature in Calsius: {ConvertToCelsius(c)}");
             }
 
             System.Console.ReadKey();
@@ -57,7 +57,7 @@
         {
             return cm * 0.3937;
         }
-        internal static double ConvertToCelsious(double f)
+        internal static double ConvertToCelsius(double f)
         {
             return (f - 32) * 0.5556;
         }
